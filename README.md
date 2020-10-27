@@ -106,9 +106,24 @@ Given that there is no existing implementation of the server or client for this,
 
 ### Mineflayer
 
+Mineflayer is a core project maintained by the PrismarineJS community and acts as a central source for most of the projects utilized by PrismarineJS in general. The goal of this project is to emulate a vanilla Minecraft client through a bot. This is built on top of _Minecraft-Protocol_ in order to interact with a Minecraft server and act like a standard Minecraft client.
+
+The goal of this project is to simulate a script-controlled player in order to preform monotonous tasks within Minecraft, preform tasks that cannot be preformed by a human player, or to study and experiment with artificial intelligence driven projects within Minecraft.
+
 #### Current State
 
+_Mineflayer_ currently stores an internal state for most elements that need to be managed within the game and is deeply integrated with _Minecraft-Protocol_. Not all functions are supported and the state of the project makes it difficult to test new features and to scale.
+
 #### Ideal State
+
+**(Dependency Graph)**
+![Mineflayer Dependency Graph Image](./images/Mineflayer%20Dependency%20Tree.svg)
+
+The above image shows an example image for the _Mineflayer_ dependency graph.
+
+The ideal state for _Mineflayer_ would be to move to to behave as a simple transformer. It should be built on top of _Prismarine-World_ such as all of the internal state is stored within _Prismarine-World_.
+
+_Minecraft-Protocol_ is the main module used for interacting with the Minecraft server.
 
 #### Intermediate Steps
 
